@@ -30,17 +30,17 @@
                 <li>
                   <%= link_to users_path, class: 'nav-link text-white' do %>
                     <i class="fas fa-users"></i>
-                    User
+                    Users
                   <% end %>
                 </li>
                 <li>
-                  <%= link_to book_index_path, class: 'nav-link text-white' do %>
+                  <%= link_to books_path, class: 'nav-link text-white' do %>
                     <i class="fas fa-book-open"></i>
-                    Book
+                    Books
                   <% end %>
                 </li>
                 <li>
-                  <%= link_to destroy_user_session_path, class: 'nav-link text-white' do %>
+                  <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-white' do %>
                     <i class="fas fa-sign-out-alt"></i>
                     Log out
                   <% end %>
@@ -66,7 +66,7 @@
               </li>
               <li>
                 <%= link_to new_user_session_path, class: 'nav-link text-white' do %>
-                  <i class="fas fa-sign-out-alt"></i>
+                  <i class="fas fa-sign-in-alt"></i>
                   Log in
                 <% end %>
               </li>
@@ -76,6 +76,16 @@
         </div>
       </nav>
     </header>
+    <p id="notice"></p>
     <%= yield %>
+    <footer>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="mx-auto">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
